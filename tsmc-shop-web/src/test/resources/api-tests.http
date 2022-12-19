@@ -1,0 +1,98 @@
+POST http://localhost:8080/user/register
+Content-Type: application/json
+
+{
+  "username": "user1"
+}
+
+###
+
+POST http://localhost:8080/listing
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "title": "Phone model 8",
+  "description": "Black color, brand new",
+  "price": 1000,
+  "category": "Electronics"
+}
+
+###
+
+GET http://localhost:8080/listing?username=user1&listingId=1
+
+###
+
+POST http://localhost:8080/listing
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "title": "Black shoes",
+  "description": "Training shoes",
+  "price": 100,
+  "category": "Sports"
+}
+
+###
+
+POST http://localhost:8080/user/register
+Content-Type: application/json
+
+{
+  "username": "user2"
+}
+
+###
+
+POST http://localhost:8080/listing
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "title": "T-shirt",
+  "description": "White color",
+  "price": 20,
+  "category": "Sports"
+}
+
+###
+
+GET http://localhost:8080/listing?username=user1&listingId=3
+
+###
+
+GET http://localhost:8080/category?username=user1&category=Fashion&sortBy=sort_time&orderBy=asc
+
+###
+
+GET http://localhost:8080/category?username=user1&category=Sports&sortBy=sort_time&orderBy=dsc
+
+###
+
+GET http://localhost:8080/category?username=user1&category=Sports&sortBy=sort_price&orderBy=dsc
+
+###
+
+GET http://localhost:8080/category/top?username=user1
+
+###
+
+DELETE http://localhost:8080/listing?username=user1&listingId=3
+
+###
+
+DELETE http://localhost:8080/listing?username=user2&listingId=3
+
+###
+
+GET http://localhost:8080/category/top?username=user2
+
+###
+
+DELETE http://localhost:8080/listing?username=user1&listingId=2
+
+###
+
+GET http://localhost:8080/category/top?username=user3

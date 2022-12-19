@@ -1,0 +1,11 @@
+POST http://localhost:8080/test
+Content-Type: application/json
+
+{
+  "params": {
+    "remaining": 12,
+    "total": 15
+  }
+}
+
+###
